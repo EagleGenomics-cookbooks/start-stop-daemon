@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 
-default['start-stop-daemon']['version'] = '1.15.8.12'
-default['start-stop-daemon']['checksum'] = 'ac9e693090090aef4c3f80e62439102ddf067c3'
+default['start-stop-daemon']['version'] = '1.18.1'
+default['start-stop-daemon']['checksum'] = 'cb26a97ca21c970cbe63a762125fe21f7437663badf6ce686589fe62650399da'
 
-dpkg_tar_path = "dpkg_#{node['start-stop-daemon']['version']}.tar.bz2"
-default['start-stop-daemon']['src_url'] = "http://ftp.de.debian.org/debian/pool/main/d/dpkg/#{dpkg_tar_path}"
+default['start-stop-daemon']['dpkg_tar_path'] = "dpkg_#{node['start-stop-daemon']['version']}.tar.xz"
+default['start-stop-daemon']['src_url'] = "http://ftp.de.debian.org/debian/pool/main/d/dpkg/#{node['start-stop-daemon']['dpkg_tar_path']}"

@@ -11,7 +11,7 @@ Requirements
 
 ## Platform
 
-* Tested on Centos 6.2
+* Tested on Centos 6.6
 * Should work on any linux distribution
 
 ## Cookbooks:

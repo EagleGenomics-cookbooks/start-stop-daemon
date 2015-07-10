@@ -17,22 +17,20 @@
 # limitations under the License.
 #
 
-include_recipe "build-essential"
+include_recipe 'build-essential'
 
-dpkg_tar = "dpkg_#{node['start-stop-daemon']['version']}.tar.bz2"
-
-remote_file "/usr/local/src/#{dpkg_tar}" do
+remote_file "/usr/local/src/#{node['start-stop-daemon']['dpkg_tar_path']}" do
   source node['start-stop-daemon']['src_url']
   checksum node['start-stop-daemon']['checksum']
   mode 0644
 end
 
-execute "tar -jxf #{dpkg_tar}" do
-  cwd "/usr/local/src"
+execute "tar -xf #{node['start-stop-daemon']['dpkg_tar_path']}" do
+  cwd '/usr/local/src'
   creates "/usr/local/src/dpkg-#{node['start-stop-daemon']['version']}"
 end
 
-bash "compile dpkg" do
+bash 'compile dpkg' do
   cwd "/usr/local/src/dpkg-#{node['start-stop-daemon']['version']}"
   code <<-EOH
     ./configure
@@ -41,11 +39,11 @@ bash "compile dpkg" do
   creates "/usr/local/src/dpkg-#{node['start-stop-daemon']['version']}/utils/start-stop-daemon"
 end
 
-bash "install start-stop-daemon" do
+bash 'install start-stop-daemon' do
   cwd "/usr/local/src/dpkg-#{node['start-stop-daemon']['version']}"
   code <<-EOH
     cd utils
     make install
   EOH
-  not_if {File.exists?("/usr/local/sbin/start-stop-daemon")}
+  not_if { File.exist?('/usr/local/sbin/start-stop-daemon') }
 end
