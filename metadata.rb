@@ -4,12 +4,10 @@ license 'Apache 2.0'
 name 'start-stop-daemon'
 description 'Installs start-stop-daemon'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '1.0.0'
+version '1.1.0'
 
 recipe 'start-stop-daemon', 'Installs start-stop-daemon to any Linux distribution'
 
-depends 'build-essential'
+supports 'centos', '= 6.6'
 
-%w( debian ubuntu centos redhat ).each do |os|
-  supports os
-end
+depends 'build-essential'
