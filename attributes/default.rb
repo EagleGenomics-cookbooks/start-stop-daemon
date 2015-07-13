@@ -17,6 +17,7 @@
 # limitations under the License.
 #
 
+# Version 1.16.16 is compatible with selinux in centos 6.6. Version 1.18.1 is not. 
 default['start-stop-daemon']['version'] = '1.16.16'
 default['start-stop-daemon']['checksum'] = 'd25045e39aeb1a6e99156e1d4b8c7672bf69b54e5f853336982e62c7a04e8ef2'
 
