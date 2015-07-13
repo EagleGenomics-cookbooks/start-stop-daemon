@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 
-default['start-stop-daemon']['version'] = '1.18.1'
-default['start-stop-daemon']['checksum'] = 'cb26a97ca21c970cbe63a762125fe21f7437663badf6ce686589fe62650399da'
+default['start-stop-daemon']['version'] = '1.16.16'
+default['start-stop-daemon']['checksum'] = 'd25045e39aeb1a6e99156e1d4b8c7672bf69b54e5f853336982e62c7a04e8ef2'
 
 default['start-stop-daemon']['dpkg_tar_path'] = "dpkg_#{node['start-stop-daemon']['version']}.tar"
 default['start-stop-daemon']['dpkg_tar_xz_path'] = "#{node['start-stop-daemon']['dpkg_tar_path']}.xz"

@@ -38,6 +38,7 @@ execute "tar -xf #{node['start-stop-daemon']['dpkg_tar_path']}" do
   creates "/usr/local/src/dpkg-#{node['start-stop-daemon']['version']}"
 end
 
+# required for dpkg to compile
 package 'ncurses-devel'
 
 bash 'compile dpkg' do
