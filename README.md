@@ -34,7 +34,7 @@ Usage
 
 Include the default recipe to install start-stop-daemon
 
-*  include_recipe "start-stop-daemon"
+    include_recipe "start-stop-daemon"
 
 You should include the recipe if the platform is not Debian or Ubuntu
 
