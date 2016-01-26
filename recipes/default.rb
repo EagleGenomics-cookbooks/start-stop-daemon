@@ -20,7 +20,7 @@
 include_recipe 'build-essential'
 
 package ['tar'] do
-    action :install
+  action :install
 end
 
 # here for use by serverspec
