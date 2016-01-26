@@ -19,6 +19,15 @@
 
 include_recipe 'build-essential'
 
+package ['tar'] do
+    action :install
+end
+
+# here for use by serverspec
+magic_shell_environment 'SSD_VERSION' do
+  value node['start-stop-daemon']['version']
+end
+
 remote_file "/usr/local/src/#{node['start-stop-daemon']['dpkg_tar_xz_path']}" do
   source node['start-stop-daemon']['src_url']
   checksum node['start-stop-daemon']['checksum']

@@ -1,4 +1,5 @@
 source 'https://supermarket.getchef.com'
 
-# cookbooks found on supermarket
+cookbook 'magic_shell', '~> 1.0.0'
+
 metadata

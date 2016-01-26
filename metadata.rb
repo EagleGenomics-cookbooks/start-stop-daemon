@@ -10,4 +10,5 @@ recipe 'start-stop-daemon', 'Installs start-stop-daemon to any Linux distributio
 
 supports 'centos', '= 6.6'
 
+depends 'magic_shell'
 depends 'build-essential'

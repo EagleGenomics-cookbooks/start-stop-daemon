@@ -10,5 +10,5 @@ end
 
 describe command('start-stop-daemon --version') do
   its(:exit_status) { should eq 0 }
-  its(:stdout) { should contain '1.18.1' }
+  its(:stdout) { should contain ENV['SSD_VERSION'] }
 end
