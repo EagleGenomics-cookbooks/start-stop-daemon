@@ -30,7 +30,7 @@ end
 
 remote_file "/usr/local/src/#{node['start-stop-daemon']['dpkg_tar_xz_path']}" do
   source node['start-stop-daemon']['src_url']
-  checksum node['start-stop-daemon']['checksum']
+  # checksum node['start-stop-daemon']['checksum']
   mode 0644
 end
 

@@ -18,8 +18,9 @@
 #
 
 # Version 1.16.17 is compatible with selinux in centos 6.6. Version 1.18.1 is not.
-default['start-stop-daemon']['version'] = '1.16.17'
-default['start-stop-daemon']['checksum'] = '4b2bd4c7725b78424e781049e628f20e6017a5dc847ba85d29e08f04e8c85a4a'
+default['start-stop-daemon']['version'] = '1.16.18'
+# checksum doesn't appear on website?
+# default['start-stop-daemon']['checksum'] = ''
 default['start-stop-daemon']['dpkg_tar_path'] = "dpkg_#{node['start-stop-daemon']['version']}.tar"
 default['start-stop-daemon']['dpkg_tar_xz_path'] = "#{node['start-stop-daemon']['dpkg_tar_path']}.xz"
 default['start-stop-daemon']['src_url'] = "http://ftp.de.debian.org/debian/pool/main/d/dpkg/#{node['start-stop-daemon']['dpkg_tar_xz_path']}"
