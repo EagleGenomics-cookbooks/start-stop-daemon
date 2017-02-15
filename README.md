@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/EagleGenomics-cookbooks/start-stop-daemon.svg?branch=master)](https://travis-ci.org/EagleGenomics-cookbooks/start-stop-daemon)
+
 Description
 ===========
 
